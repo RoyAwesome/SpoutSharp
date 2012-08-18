@@ -8,7 +8,8 @@ namespace SpoutAPI
     public interface Server : Engine
     {
         /// <summary>
-        /// If the server has whitelisting turned on or off.
+        /// True if whitelisting is turned on for this server,
+        /// False if it is turned off.
         /// </summary>
         bool Whitelist
         {
