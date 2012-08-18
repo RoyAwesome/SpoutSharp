@@ -5,6 +5,9 @@ using System.Text;
 
 namespace SpoutAPI
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Spout
     {
     }
