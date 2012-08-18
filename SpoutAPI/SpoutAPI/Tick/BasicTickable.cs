@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpoutAPI.Tick
 {
-    abstract class BasicTickable : Tickable
+    public abstract class BasicTickable : Tickable
     {
         public abstract void OnTick(float dt);
        
