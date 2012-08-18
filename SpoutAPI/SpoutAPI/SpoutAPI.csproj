@@ -40,6 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+	<Compile Include="Entity\BasicComponent.cs" />
+    <Compile Include="Entity\BasicComponentHolder.cs" />
+    <Compile Include="Entity\Component.cs" />
+    <Compile Include="Entity\ComponentHolder.cs" />
+    <Compile Include="Tick\BasicTickable.cs" />
+    <Compile Include="Tick\Tickable.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="Server.cs" />
