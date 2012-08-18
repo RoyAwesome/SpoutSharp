@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpoutAPI
 {
-    public sealed static class Spout
+    public static class Spout
     {
         private static Engine instance;
         public static Engine Engine

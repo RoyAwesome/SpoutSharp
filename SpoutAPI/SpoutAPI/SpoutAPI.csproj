@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client.cs" />
+    <Compile Include="Engine.cs" />
+    <Compile Include="Server.cs" />
     <Compile Include="Spout.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
