@@ -6,7 +6,7 @@ using SpoutAPI.Tick;
 
 namespace SpoutAPI.Entity
 {
-    class BasicComponentHolder : BasicTickable, ComponentHolder
+    public class BasicComponentHolder : BasicTickable, ComponentHolder
     {
         Dictionary<System.Type, Component> components = new Dictionary<Type, Component>();
         

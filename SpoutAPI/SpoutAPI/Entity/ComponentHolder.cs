@@ -6,7 +6,7 @@ using SpoutAPI.Tick;
 
 namespace SpoutAPI.Entity
 {
-    interface ComponentHolder : Tickable
+    public interface ComponentHolder : Tickable
     {
         T AddComponent<T>() where T : Component;
 
