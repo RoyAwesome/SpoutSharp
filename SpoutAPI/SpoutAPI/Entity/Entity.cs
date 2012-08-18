@@ -7,7 +7,7 @@ using SpoutAPI.Entity.Components;
 
 namespace SpoutAPI.Entity
 {
-    public interface Entity : Tickable
+    public interface Entity : Tickable, ComponentHolder
     {
         /// <summary>
         /// Id for the entity inside the manager.  This is not saved.  
