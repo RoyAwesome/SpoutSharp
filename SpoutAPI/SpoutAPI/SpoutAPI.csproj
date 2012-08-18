@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OpenTK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\OpenTK.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,10 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-	<Compile Include="Entity\BasicComponent.cs" />
+    <Compile Include="Entity\BasicComponent.cs" />
     <Compile Include="Entity\BasicComponentHolder.cs" />
     <Compile Include="Entity\Component.cs" />
     <Compile Include="Entity\ComponentHolder.cs" />
+    <Compile Include="Entity\Components\Controller.cs" />
+    <Compile Include="Entity\Components\Transform.cs" />
+    <Compile Include="Entity\Entity.cs" />
     <Compile Include="Tick\BasicTickable.cs" />
     <Compile Include="Tick\Tickable.cs" />
     <Compile Include="Client.cs" />
@@ -52,6 +59,7 @@
     <Compile Include="Spout.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
