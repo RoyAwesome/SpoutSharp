@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using SpoutAPI.Entity.Components;
 using SpoutAPI.Tick;
-using SpoutAPI.Entity.Components;
 
 namespace SpoutAPI.Entity
 {

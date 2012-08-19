@@ -1,11 +1,7 @@
 ﻿using OpenTK;
-using SpoutAPI.Geo;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SpoutAPI.MathHelper;
 using SpoutAPI.Geo.Discrete;
+using SpoutAPI.MathHelper;
+using System;
 
 namespace SpoutAPI.Geo.Cuboid
 {
