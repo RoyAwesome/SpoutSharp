@@ -30,9 +30,9 @@ namespace SpoutAPI.Render
         void UpdateView();
 
         /// <summary>
-        /// View frustrum of the camera.
+        /// View frustum of the camera.
         /// </summary>
-        ViewFustrum Frustrum
+        ViewFrustum Frustrum
         {
             get;
         }
