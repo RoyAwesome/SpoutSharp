@@ -151,11 +151,6 @@ namespace SpoutAPI.Geo.Cuboid
             return Math.Max(Math.Abs(vector.X - other.vector.X), Math.Max(Math.Abs(vector.Y - other.vector.Y), Math.Abs(vector.Z - other.vector.Z)));
         }
 
-        public Vector3 getVector3()
-        {
-            return vector;
-        }
-
         public World getWorld()
         {
             return world;
