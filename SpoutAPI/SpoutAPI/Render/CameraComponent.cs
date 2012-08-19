@@ -26,7 +26,6 @@ namespace SpoutAPI.Render
         public override void UpdateView()
         {
             view = Matrix4.Rotate(Parent.Transform.Rotation) * Matrix4.Translation(Parent.Transform.Position);
-
         }
 
         public override void onTick(float dt)
@@ -46,6 +45,5 @@ namespace SpoutAPI.Render
         {
             get { return frustum; }
         }
-
     }
 }
