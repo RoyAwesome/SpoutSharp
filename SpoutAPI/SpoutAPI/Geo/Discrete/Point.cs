@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SpoutAPI.Math.Vector3Ext;
 
 namespace SpoutAPI.Geo.Cuboid
 {
@@ -32,11 +33,7 @@ namespace SpoutAPI.Geo.Cuboid
 
         public static bool operator ==(Point l, Point r)
         {
-            if (l.world != r.world)
-            {
-                return false;
-            }
-            if (l.vector != r.vector)
+            if (l.world != r.world || l.vector != r.vector)
             {
                 return false;
             }
@@ -45,11 +42,7 @@ namespace SpoutAPI.Geo.Cuboid
 
         public static bool operator !=(Point l, Point r)
         {
-            if (l.world == r.world)
-            {
-                return false;
-            }
-            if (l.vector == r.vector)
+            if (l.world == r.world || l.world == r.world)
             {
                 return false;
             }
@@ -69,7 +62,7 @@ namespace SpoutAPI.Geo.Cuboid
         {
             if (l.world != r.world)
             {
-                throw new InvalidOperationException("Cannot add two points with mismatch worlds together");
+                throw new InvalidOperationException("Cannot subtract two points with mismatch worlds together");
             }
             return new Point(l.world, Vector3.Subtract(l.vector, r.vector));
         }
@@ -78,7 +71,7 @@ namespace SpoutAPI.Geo.Cuboid
         {
             if (l.world != r.world)
             {
-                throw new InvalidOperationException("Cannot add two points with mismatch worlds together");
+                throw new InvalidOperationException("Cannot divide two points with mismatch worlds together");
             }
             return new Point(l.world, Vector3.Divide(l.vector, r.vector));
         }
@@ -87,9 +80,28 @@ namespace SpoutAPI.Geo.Cuboid
         {
             if (l.world != r.world)
             {
-                throw new InvalidOperationException("Cannot add two points with mismatch worlds together");
+                throw new InvalidOperationException("Cannot multiply two points with mismatch worlds together");
             }
             return new Point(l.world, Vector3.Multiply(l.vector, r.vector));
         }
+
+        public int BlockX()
+        {
+            return vector.FloorX();
+        }
+
+        public int getBlockY()
+        {
+            return (int)Math.Floor(vector.Y);
+        }
+
+        public int getBlockZ()
+        {
+            return (int)Math.Floor(vector.Z);
+        }
+
+        public int getChunkX()
+        {
+            return vector.  
     }  
 }
