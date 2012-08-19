@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-
 namespace SpoutAPI.Render
 {
     public class ViewFrustum
@@ -16,7 +15,7 @@ namespace SpoutAPI.Render
         {
             double t;
             Matrix4 result = view * projection;
-            float[] clip;
+            float[] clip; //TODO this
 
             frustum[0, 0] = clip[3] - clip[0];
             frustum[0, 1] = clip[7] - clip[4];

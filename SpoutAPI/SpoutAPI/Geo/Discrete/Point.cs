@@ -160,5 +160,15 @@ namespace SpoutAPI.Geo.Cuboid
         {
             return base.ToString() + ": " + world.ToString() + ", " + vector.X + " " + vector.Y + " " + vector.Z;
         }
+
+        public override int GetHashCode()
+        {
+            if (!hashed)
+            {
+                hashcode = 0;
+                hashed = true;
+            }
+            return hashcode;
+        }
     }
 }
