@@ -1,10 +1,11 @@
 ﻿using OpenTK;
-using SpoutAPI.Geo.discrete;
+using SpoutAPI.Geo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SpoutAPI.Math.Vector3Ext;
+using SpoutAPI.MathHelper;
+using SpoutAPI.Geo.Discrete;
 
 namespace SpoutAPI.Geo.Cuboid
 {
@@ -85,23 +86,24 @@ namespace SpoutAPI.Geo.Cuboid
             return new Point(l.world, Vector3.Multiply(l.vector, r.vector));
         }
 
-        public int BlockX()
+        public int BlockX
         {
-            return vector.FloorX();
+           get {  return vector.FloorX(); }
         }
 
-        public int getBlockY()
+        public int BlockY
         {
-            return (int)Math.Floor(vector.Y);
+            get { return vector.FloorY(); }
         }
 
-        public int getBlockZ()
+        public int BlockZ
         {
-            return (int)Math.Floor(vector.Z);
+           get { return vector.FloorZ(); }
         }
 
         public int getChunkX()
         {
-            return vector.  
+            return BlockX / 16;
+        }
     }  
 }

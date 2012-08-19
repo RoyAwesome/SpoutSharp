@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SpoutAPI.Geo.discrete
+namespace SpoutAPI.Geo.Discrete
 {
     class World
     {
