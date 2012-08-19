@@ -3,17 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SpoutAPI.Tick;
+using SpoutAPI.Entity.Components;
 
 namespace SpoutAPI.Entity
 {
     public interface Component : Tickable
     {
-        public Entity Parent
+        Entity Parent
+        {
+            set;
+            get;
+        }
+
+        Transform Transform
         {
             get;
         }
 
-        void Init();
+        Controller Controller
+        {
+            get;
+        }
+
+        void Spawned();
 
         void OnAttached();
 

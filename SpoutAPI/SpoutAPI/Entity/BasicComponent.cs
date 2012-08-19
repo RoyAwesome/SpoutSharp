@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SpoutAPI.Tick;
+using SpoutAPI.Entity.Components;
 
 namespace SpoutAPI.Entity
 {
@@ -11,19 +12,36 @@ namespace SpoutAPI.Entity
 
         internal Entity parent;
 
-        Entity Parent
+        public Entity Parent
         {
             get { return parent; }
-           
+            set
+            {
+                parent = value;
+                OnAttached();
+            }
         }
 
-
-        public abstract void Init();
-              
-        public void OnDetached()
+        public Transform Transform
         {
-           
+            get { return Parent.Transform; }
         }
-             
+
+        public Controller Controller
+        {
+            get { return Parent.Controller; }
+        }
+
+        public abstract void Spawned();
+
+        public virtual void OnAttached()
+        {
+
+        }
+
+        public virtual void OnDetached()
+        { 
+
+        }
     }
 }

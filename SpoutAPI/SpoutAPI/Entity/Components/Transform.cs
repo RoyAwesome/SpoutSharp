@@ -75,7 +75,7 @@ namespace SpoutAPI.Entity.Components
         }
 
 
-        public override void Init()
+        public override void Spawned()
         {
             
         }
