@@ -9,6 +9,7 @@ namespace SpoutAPI.Entity
 {
     public interface Entity : Tickable, ComponentHolder
     {
+        #region Identifiers
         /// <summary>
         /// Id for the entity inside the manager.  This is not saved.  
         /// </summary>
@@ -24,6 +25,9 @@ namespace SpoutAPI.Entity
         {
             get;
         }
+        #endregion
+
+        #region Basic Component Helpers
         /// <summary>
         /// Location of the Entity in space.
         /// Never null.  
@@ -40,7 +44,10 @@ namespace SpoutAPI.Entity
             get;
             set;
         }
-       
+
+        #endregion
+
+        #region Entity Properties
         /// <summary>
         /// View distance of the entity
         /// Only is check if the entity is an observer
@@ -73,7 +80,9 @@ namespace SpoutAPI.Entity
         {
             get;
         }
+        #endregion
 
+        #region Methods
         /// <summary>
         /// Called when the entity is synced to clients
         /// </summary>
@@ -89,7 +98,7 @@ namespace SpoutAPI.Entity
         /// </summary>
         /// <returns></returns>
         bool Kill();
-
+        #endregion
 
     }
 }
