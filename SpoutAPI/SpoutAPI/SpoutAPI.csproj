@@ -51,6 +51,11 @@
     <Compile Include="Entity\Components\Controller.cs" />
     <Compile Include="Entity\Components\Transform.cs" />
     <Compile Include="Entity\Entity.cs" />
+    <Compile Include="Geo\Cuboid\Cuboid.cs" />
+    <Compile Include="Geo\Discrete\Point.cs" />
+    <Compile Include="Geo\Discrete\World.cs" />
+    <Compile Include="Render\Camera.cs" />
+    <Compile Include="Render\ViewFrustum.cs" />
     <Compile Include="Tick\BasicTickable.cs" />
     <Compile Include="Tick\Tickable.cs" />
     <Compile Include="Client.cs" />
