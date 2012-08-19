@@ -8,6 +8,10 @@ namespace SpoutAPI.Entity
 {
     public interface Component : Tickable
     {
+        public Entity Parent
+        {
+            get;
+        }
 
         void Init();
 

@@ -27,7 +27,7 @@ namespace SpoutAPI.Entity
 
             components[componentType] = comp;
 
-            comp.Init();
+            comp.Init();            
 
             return (T)comp;
         }

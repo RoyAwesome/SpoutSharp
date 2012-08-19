@@ -8,7 +8,7 @@ namespace SpoutAPI.Entity
 {
     public abstract class BasicComponent : BasicTickable, Component
     {
-     
+
         internal Entity parent;
 
         Entity Parent
@@ -19,12 +19,7 @@ namespace SpoutAPI.Entity
 
 
         public abstract void Init();
-       
-        public void OnAttached()
-        {
-           
-        }
-
+              
         public void OnDetached()
         {
            
