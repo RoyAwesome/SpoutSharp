@@ -22,6 +22,6 @@ namespace SpoutAPI.Render
 
         void Attribute(string name, int size, int type, int stride, long offset, int layout);
 
-        void assign();
+        void Assign();
     }
 }

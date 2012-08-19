@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿
 namespace SpoutAPI.Render
 {
     /// <summary>
-    /// Render Mode for the client
+    /// Render Mode for the Client
     /// 
     /// GL11 - OpenGL 1.1 Client Profile
     /// GL20 - OpenGL 2.0 Client Profile
