@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SpoutAPI.Geo.Discrete
+namespace SpoutAPI.Render
 {
-    public class World
+    public interface Shader
     {
     }
 }

@@ -73,6 +73,15 @@ namespace SpoutAPI.Geo.Cuboid
             return false;
         }
 
+        public static bool operator !=(Cuboid l, Cuboid r)
+        {
+            if (l.hashcode == r.hashcode)
+            {
+                return false;
+            }
+            return true;
+        }
+
         public override int GetHashCode()
         {
             if (!hashed)
@@ -112,6 +121,15 @@ namespace SpoutAPI.Geo.Cuboid
         public override string ToString()
         {
             return base.ToString() + ": Cuboid: " + x + ", " + y + " " + z;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            return this == obj;
         }
     }
 }

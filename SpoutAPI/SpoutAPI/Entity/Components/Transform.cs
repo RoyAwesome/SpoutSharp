@@ -10,12 +10,10 @@ namespace SpoutAPI.Entity.Components
     {
         static Transform Empty = new Transform();
 
-
         Vector3 position = Vector3.Zero;
         Quaternion rotation = Quaternion.Identity;
         Vector3 scale = Vector3.One;
         Transform parentTransform = Empty;
-
 
         public Vector3 Position
         {

@@ -1,8 +1,4 @@
 ﻿using OpenTK;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace SpoutAPI.Render
 {
@@ -16,6 +12,10 @@ namespace SpoutAPI.Render
         {
             this.projection = projection;
             this.view = view;
+        }
+
+        public override void Spawned()
+        {
         }
 
         public override Matrix4 Projection
@@ -33,9 +33,9 @@ namespace SpoutAPI.Render
             frustum.update(projection, view);
         }
 
-        public override ViewFrustum getFrustum()
+        public override ViewFrustum Frustum
         {
-            return frustum;
+            get {return frustum; }
         }
     }
 }

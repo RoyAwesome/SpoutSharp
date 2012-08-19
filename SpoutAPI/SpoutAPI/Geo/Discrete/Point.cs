@@ -102,7 +102,7 @@ namespace SpoutAPI.Geo.Cuboid
 
         public float Z
         {
-            get { return vector.Z }
+            get { return vector.Z; }
         }
 
         public int BlockX
@@ -188,6 +188,15 @@ namespace SpoutAPI.Geo.Cuboid
                 hashed = true;
             }
             return hashcode;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            return this == obj;
         }
     }
 }

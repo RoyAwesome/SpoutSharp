@@ -5,6 +5,9 @@ using System.Text;
 
 namespace SpoutAPI.Render
 {
+    /// <summary>
+    /// Used for drawing text to the screen
+    /// </summary>
     public interface Font
     {
         float CharTop
@@ -22,6 +25,6 @@ namespace SpoutAPI.Render
             get;
         }
 
-        Rectangle GetPixelBounds(char ch);
+        //Rectangle GetPixelBounds(char ch);
     }
 }

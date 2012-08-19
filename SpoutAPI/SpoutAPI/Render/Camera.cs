@@ -32,7 +32,7 @@ namespace SpoutAPI.Render
         /// <summary>
         /// View frustum of the camera.
         /// </summary>
-        ViewFrustum Frustrum
+        ViewFrustum Frustum
         {
             get;
         }

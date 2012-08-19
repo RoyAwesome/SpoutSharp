@@ -7,7 +7,7 @@ using System.Text;
 
 namespace SpoutAPI.Render
 {
-    public class CameraComponent : BasicComponent, BasicCamera
+    public class CameraComponent : BasicComponent, Camera
     {
         private readonly ViewFrustum frustum = new ViewFrustum();
         private Matrix4 projection;
@@ -28,13 +28,13 @@ namespace SpoutAPI.Render
             view = Matrix4.Rotate(Parent.Transform.Rotation) * Matrix4.Translation(Parent.Transform.Position);
         }
 
-        public override void onTick(float dt)
+        public override void OnTick(float dt)
         {
             UpdateView();
             frustum.update(projection, view);
         }
 
-        public override void onAttached()
+        public override void OnAttached()
         {
             projection = Matrix4.CreatePerspectiveFieldOfView(90f, 4.0f / 3.0f, .001f, 1000f);
             UpdateView();
