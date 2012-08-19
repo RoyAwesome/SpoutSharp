@@ -7,9 +7,9 @@ using System.Text;
 
 namespace SpoutAPI.Geo.Cuboid
 {
+    [Serializable]
     public class Point
     {
-        private readonly static long serialVersionUID = 1L;
         internal readonly Vector3 vector;
         internal readonly World world;
         //Hashcode
