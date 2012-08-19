@@ -103,7 +103,7 @@ namespace SpoutAPI.Geo.Cuboid
             return vertices;
         }
 
-        public Boolean contains(Vector3 vec)
+        public bool contains(Vector3 vec)
         {
             Vector3 max = bas.vector + size;
             return (bas.X <= vec.X && vec.X < max.X) && (bas.Y <= vec.Y && vec.Y < max.Y) && (bas.Z <= vec.Z && vec.Z < max.Z);
