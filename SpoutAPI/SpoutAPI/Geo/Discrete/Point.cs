@@ -88,7 +88,7 @@ namespace SpoutAPI.Geo.Cuboid
 
         public int BlockX
         {
-           get {  return vector.FloorX(); }
+            get { return vector.FloorX(); }
         }
 
         public int BlockY
@@ -98,12 +98,72 @@ namespace SpoutAPI.Geo.Cuboid
 
         public int BlockZ
         {
-           get { return vector.FloorZ(); }
+            get { return vector.FloorZ(); }
         }
 
-        public int getChunkX()
+        public int ChunkX
         {
-            return BlockX / 16;
+            get { return BlockX / 16; }
         }
-    }  
+
+        public int ChunkY
+        {
+            get { return BlockX / 16; }
+        }
+
+        public int ChunkZ
+        {
+            get { return BlockZ / 16; }
+        }
+
+        public double getSquaredDistance(Point other)
+        {
+            if (other == null || world == null || vector == null || other.vector == null || other.world == null || world != other.world)
+            {
+                return Double.MaxValue;
+            }
+            double dx = vector.X - other.vector.X;
+            double dy = vector.Y - other.vector.Y;
+            double dz = vector.Z - other.vector.Z;
+            return dx * dx + dy * dy + dz * dz;
+        }
+
+        public double getDistance(Point other)
+        {
+            return Math.Sqrt(getSquaredDistance(other));
+        }
+
+        public double getManhattanDistance(Point other)
+        {
+            if (other == null || world == null || vector == null || other.vector == null || other.world == null || world != other.world)
+            {
+                return Double.MaxValue;
+            }
+            return Math.Abs(vector.X - other.vector.X) + Math.Abs(vector.Y - other.vector.Y) + Math.Abs(vector.Z - other.vector.Z);
+        }
+
+        public double getMaxDistance(Point other)
+        {
+            if (other == null || world == null || vector == null || other.vector == null || other.world == null || world != other.world)
+            {
+                return Double.MaxValue;
+            }
+            return Math.Max(Math.Abs(vector.X - other.vector.X), Math.Max(Math.Abs(vector.Y - other.vector.Y), Math.Abs(vector.Z - other.vector.Z)));
+        }
+
+        public Vector3 getVector3()
+        {
+            return vector;
+        }
+
+        public World getWorld()
+        {
+            return world;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + ": " + world.ToString() + ", " + vector.X + " " + vector.Y + " " + vector.Z;
+        }
+    }
 }
