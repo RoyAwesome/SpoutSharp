@@ -82,7 +82,7 @@ namespace SpoutAPI.Entity
         /// <summary>
         /// Called at the end of the tick stage
         /// </summary>
-        void FinializeTick();
+        void FinalizeTick();
 
         /// <summary>
         /// Kills an entity.  This takes effect in the next snapshot stage
