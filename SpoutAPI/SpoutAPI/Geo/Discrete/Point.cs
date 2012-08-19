@@ -23,6 +23,10 @@ namespace SpoutAPI.Geo.Cuboid
         public Point(World world, Vector3 vector)
         {
             this.world = world;
+            if (vector == null)
+            {
+                throw new NullReferenceException("Trying to set a null vector for a Point!");
+            }
             this.vector = vector;
         }
 
@@ -84,6 +88,21 @@ namespace SpoutAPI.Geo.Cuboid
                 throw new InvalidOperationException("Cannot multiply two points with mismatch worlds together");
             }
             return new Point(l.world, Vector3.Multiply(l.vector, r.vector));
+        }
+
+        public float X
+        {
+            get { return vector.X; }
+        }
+
+        public float Y
+        {
+            get { return vector.Y; }
+        }
+
+        public float Z
+        {
+            get { return vector.Z }
         }
 
         public int BlockX
