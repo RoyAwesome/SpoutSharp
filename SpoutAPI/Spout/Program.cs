@@ -9,6 +9,13 @@ namespace Spout
     {
         static void Main(string[] args)
         {
+          
+#if CLIENT
+            SpoutEngine engine = new SpoutClient();
+#else
+            SpoutEngine engine = new SpoutServer();
+#endif
+            
         }
     }
 }
