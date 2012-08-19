@@ -10,7 +10,7 @@ using SpoutAPI.Geo.Discrete;
 namespace SpoutAPI.Geo.Cuboid
 {
     [Serializable]
-    public class Point
+    public class Point : WorldSource
     {
         internal readonly Vector3 vector;
         internal readonly World world;

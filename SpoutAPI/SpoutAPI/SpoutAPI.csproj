@@ -54,6 +54,7 @@
     <Compile Include="Geo\Cuboid\Cuboid.cs" />
     <Compile Include="Geo\Discrete\Point.cs" />
     <Compile Include="Geo\Discrete\World.cs" />
+    <Compile Include="Geo\WorldSource.cs" />
     <Compile Include="Math\Vector3Ext.cs" />
     <Compile Include="Render\Camera.cs" />
     <Compile Include="Render\ViewFrustum.cs" />

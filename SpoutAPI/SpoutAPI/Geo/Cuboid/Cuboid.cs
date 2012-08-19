@@ -7,7 +7,7 @@ using System.Text;
 
 namespace SpoutAPI.Geo.Cuboid
 {
-    public class Cuboid
+    public class Cuboid : WorldSource
     {
         internal readonly Point bas;
         internal readonly Vector3 size;
@@ -59,7 +59,7 @@ namespace SpoutAPI.Geo.Cuboid
             get { return z; }
         }
 
-        public World getWorld()
+        public override World getWorld()
         {
             return bas.getWorld();
         }
