@@ -60,6 +60,7 @@
     <Compile Include="Render\Camera.cs" />
     <Compile Include="Render\CameraComponent.cs" />
     <Compile Include="Render\Font.cs" />
+    <Compile Include="Render\Rectangle.cs" />
     <Compile Include="Render\ViewFrustum.cs" />
     <Compile Include="Tick\BasicTickable.cs" />
     <Compile Include="Tick\Tickable.cs" />

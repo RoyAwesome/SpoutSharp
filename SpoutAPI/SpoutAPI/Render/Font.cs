@@ -22,9 +22,6 @@ namespace SpoutAPI.Render
             get;
         }
 
-        float PixelBounds(char ch)
-        {
-            get;
-        }
+        Rectangle GetPixelBounds(char ch);
     }
 }
