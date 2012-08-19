@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpoutAPI.Entity.Components
 {
-    abstract class Controller : BasicComponent
+    public abstract class Controller : BasicComponent
     {
 
        

@@ -6,33 +6,36 @@ using OpenTK;
 
 namespace SpoutAPI.Entity.Components
 {
-    class Transform : BasicComponent
+    public class Transform : BasicComponent
     {
-        Vector3 position;
-        Quaternion rotation;
-        Vector3 scale;
-        Transform parent;
+        static Transform Empty = new Transform();
+
+
+        Vector3 position = Vector3.Zero;
+        Quaternion rotation = Quaternion.Identity;
+        Vector3 scale = Vector3.One;
+        Transform parentTransform = Empty;
 
 
         public Vector3 Position
         {
-            get;
-            set;
+            get { return position; }
+            set { position = value; }
         }
 
         public Quaternion Rotation
         {
-            get;
-            set;
+            get { return rotation; }
+            set { rotation = value; }
         }
 
         public Vector3 Scale
         {
-            get;
-            set;
+            get { return scale; }
+            set { scale = value; }
         }
 
-        public Matrix4 Transform
+        public Matrix4 TransformaMatrix
         {
             get
             {
@@ -44,16 +47,16 @@ namespace SpoutAPI.Entity.Components
         {
             get
             {
-                return parent;
+                return parentTransform;
             }
 
             set
             {
-                parent = value;
+                parentTransform = value;
             }
         }
 
-
+       
         public static Transform operator+(Transform r, Transform l)
         {
             Transform t = new Transform();
@@ -67,9 +70,19 @@ namespace SpoutAPI.Entity.Components
         {
             get
             {
-                return parent + this;
+               return parentTransform + this;
             }
         }
-       
+
+
+        public override void Init()
+        {
+            
+        }
+
+        public override void OnTick(float dt)
+        {
+            
+        }
     }
 }

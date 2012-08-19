@@ -8,6 +8,7 @@ namespace SpoutAPI.Entity
 {
     public interface Component : Tickable
     {
+
         void Init();
 
         void OnAttached();
